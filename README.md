@@ -71,7 +71,7 @@ Mostra a branch atual
 ### 9. Criar nova branch
 
 ```bash
-git branch -b "nome da branch"
+git checkout -b "nome da branch"
 ```
 
 Cria uma nova branch a partir do histórico da branch
@@ -106,15 +106,15 @@ Manda as alterações locais para o repositório
 git pull "nome do remote" "nome da branch"
 ```
 
-Pega as alterações do repositório e atualiza a máquina
+Pega as alterações do repositório remoto e atualiza a máquina
 
 ### 14. Atualizar histórico local
 
 ```bash
-git fetch
+git fetch "nome do repo remoto"
 ```
 
-Atualiza o histórico local de acordo com o histórico do repositório
+Atualiza o histórico de branches local de acordo com o histórico do repositório remoto
 
 ### 15. Detalhes de um commit ou arquivo
 
@@ -241,4 +241,12 @@ git branch -D "nome da branch"
 ```
 
 Força a exclusão de uma branch, mesmo que ainda não tenha sido mesclada
+
+### 30. Listar repositórios remotos configurados
+
+```bash
+git remote -v
+```
+
+Mostra os repositórios remotos configurados no seu projeto, junto com suas URLs 
 
