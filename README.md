@@ -55,7 +55,7 @@ Mostra qual foi a alteração na ramificação e onde foi
 ### 7. Fazer merge de branches
 
 ```bash
-git merge
+git merge "branch alterada" "branch principal"
 ```
 
 Faz a mescla das ramificações
