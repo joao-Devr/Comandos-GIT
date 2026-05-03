@@ -218,3 +218,27 @@ git restore
 
 (sem a opção --staged) Move todos os arquivos da área de preparação de volta para o repositório, desfazendo a preparação de todos os arquivos
 
+### 27. Renomear uma branch
+
+```bash
+git branch -m "branch atual" "novo nome da branch"
+```
+
+Renomeia uma branch existente para um novo nome
+
+### 28. Excluir uma branch
+
+```bash
+git branch -d "nome da branch"
+```
+
+Exclui uma branch após o merge (não permite exclusão se houver commits não mesclados)
+
+### 29. Força a exclusão de uma branch
+
+```bash
+git branch -D "nome da branch"
+```
+
+Força a exclusão de uma branch, mesmo que ainda não tenha sido mesclada
+
