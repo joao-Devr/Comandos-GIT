@@ -55,7 +55,7 @@ Mostra qual foi a alteração na ramificação e onde foi
 ### 7. Fazer merge de branches
 
 ```bash
-git merge "branch alterada" "branch principal"
+git merge branch_alterada branch_principal
 ```
 
 Faz a mescla das ramificações
@@ -71,7 +71,7 @@ Mostra a branch atual
 ### 9. Criar nova branch
 
 ```bash
-git checkout -b "nome da branch"
+git checkout -b nome_branch
 ```
 
 Cria uma nova branch a partir do histórico da branch
@@ -79,7 +79,7 @@ Cria uma nova branch a partir do histórico da branch
 ### 10. Mudar de branch
 
 ```bash
-git checkout "nome da branch"
+git checkout nome_branch
 ```
 
 Muda para a branch escolhida
@@ -87,7 +87,7 @@ Muda para a branch escolhida
 ### 11. Adicionar repositório remoto
 
 ```bash
-git remote add "nome do remote" "url do repositorio"
+git remote add nome_remote url_repositorio
 ```
 
 Adiciona um novo repositório remoto
@@ -95,7 +95,7 @@ Adiciona um novo repositório remoto
 ### 12. Enviar alterações para repositório
 
 ```bash
-git push "nome do remote" "nome da branch"
+git push nome_remote nome_branch_modificada
 ```
 
 Manda as alterações locais para o repositório
@@ -103,7 +103,7 @@ Manda as alterações locais para o repositório
 ### 13. Atualizar com alterações do repositório
 
 ```bash
-git pull "nome do remote" "nome da branch"
+git pull nome_remote nome_branch_principal
 ```
 
 Pega as alterações do repositório remoto e atualiza a máquina
@@ -111,7 +111,7 @@ Pega as alterações do repositório remoto e atualiza a máquina
 ### 14. Atualizar histórico local
 
 ```bash
-git fetch "nome do repo remoto"
+git fetch nome_do_remoto
 ```
 
 Atualiza o histórico de branches local de acordo com o histórico do repositório remoto
@@ -119,7 +119,7 @@ Atualiza o histórico de branches local de acordo com o histórico do repositór
 ### 15. Detalhes de um commit ou arquivo
 
 ```bash
-git show
+git show id_do_commit ou nome_do_arquivo
 ```
 
  Mostra detalhes de uma versão específica de um arquivo ou commit
@@ -135,7 +135,7 @@ Compara diferenças entre versões de arquivos ou entre o estado atual e o últi
 ### 17. Comparar versão atual de um arquivo com a última versão confirmada
 
 ```bash
-git diff report.md
+git diff nome_do_arquivo
 ```
 
 Compara a versão atual do arquivo report.md com a última versão confirmada (commit)
@@ -175,7 +175,7 @@ Refere-se ao commit anterior ao HEAD (um antes do mais recente)
 ### 22. Comparar diferenças entre dois commits específicos
 
 ```bash
-git diff <hash1> <hash2>
+git diff hash_cimmit_1 hash_cimmit_2
 ```
 
 Compara as diferenças entre dois commits específicos usando seus hashes
@@ -183,7 +183,7 @@ Compara as diferenças entre dois commits específicos usando seus hashes
 ### 23. Reverter um commit
 
 ```bash
-git revert <commit>
+git revert id_commit
 ```
 
 Desfaz um commit criando um novo commit com as alterações revertidas(reverte todos os arquivos). Pode usar um hash de commit ou HEAD para especificar qual commit reverter
@@ -191,13 +191,13 @@ Desfaz um commit criando um novo commit com as alterações revertidas(reverte t
  Para nao criar um novo commit e apenas reverter as alterações usamos: 
 
 ```bash
-git revert -n <commit>
+git revert -n id_commit
 ```
 
 ### 24. Recuperar um arquivo de um commit específico
 
 ```bash
-git checkout <commit> -- <arquivo>
+git checkout id_commit -- nome_arquivo
 ```
 
 Permite recuperar um arquivo de um commit específico, voltando o arquivo ao estado anterior. Usa o hash do commit ou HEAD, seguido do nome do arquivo
@@ -205,7 +205,7 @@ Permite recuperar um arquivo de um commit específico, voltando o arquivo ao est
 ### 25. Remover arquivo da área de preparação
 
 ```bash
-git restore --staged <arquivo>
+git restore --staged nome_arquivo
 ```
 
 Remove um arquivo da área de preparação (staging), voltando-o ao diretório de trabalho para edição antes de fazer um novo commit
@@ -221,7 +221,7 @@ git restore
 ### 27. Renomear uma branch
 
 ```bash
-git branch -m "branch atual" "novo nome da branch"
+git branch -m branch_atual novo_nome_branch
 ```
 
 Renomeia uma branch existente para um novo nome
@@ -229,7 +229,7 @@ Renomeia uma branch existente para um novo nome
 ### 28. Excluir uma branch
 
 ```bash
-git branch -d "nome da branch"
+git branch -d nome_branch
 ```
 
 Exclui uma branch após o merge (não permite exclusão se houver commits não mesclados)
@@ -237,7 +237,7 @@ Exclui uma branch após o merge (não permite exclusão se houver commits não m
 ### 29. Força a exclusão de uma branch
 
 ```bash
-git branch -D "nome da branch"
+git branch -D nome_branch
 ```
 
 Força a exclusão de uma branch, mesmo que ainda não tenha sido mesclada
